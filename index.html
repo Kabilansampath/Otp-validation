@@ -1,0 +1,61 @@
+<div id="app"></div>
+<form>
+  <h1>OTP VALIDATION</h1>
+  <input
+    type="text"
+    id="1"
+    class="a"
+    maxlength="1"
+    pattern="[0-9]{1}"
+    autofocus
+    onkeyup="valid(this)"
+  />
+  <input
+    type="text"
+    id="2"
+    class="a"
+    maxlength="1"
+    pattern="[0-9]{1}"
+    onkeyup="valid(this)"
+  />
+  <input
+    type="text"
+    id="3"
+    class="a"
+    maxlength="1"
+    pattern="[0-9]{1}"
+    onkeyup="valid(this)"
+  />
+  <input
+    type="text"
+    id="4"
+    class="a"
+    maxlength="1"
+    pattern="[0-9]{1}"
+    onkeyup="valid(this)"
+  />
+  <br /><br />
+  <input id="5" onclick="submited()" class="b" type="submit" />
+</form>
+<script>
+  function valid(inputElement) {
+      // Get the current input element's value
+      var currentValue = inputElement.value;
+      
+      // If the current input has a value and it's a single digit
+      if (currentValue && currentValue.length === 1) {
+          // Convert the input ID to a number
+          var currentID = parseInt(inputElement.id);
+          var nextID = currentID + 1;
+          var nextInput = document.getElementById(nextID.toString());
+          
+          
+              nextInput.focus();
+         
+      }
+  }
+function submited() {
+      // Handle form submission here
+      alert("Validated");
+  }
+</script>

@@ -1,0 +1,13 @@
+.a{
+  width: 25px;
+  height: 25px;
+  border-radius: 10px;
+}
+.b{
+  background-color: green;
+  color: white;
+  border: none;
+  margin-left: 40px;
+  border-radius: 10px;
+  height: 30px;
+}
